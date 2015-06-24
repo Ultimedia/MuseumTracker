@@ -1,0 +1,31 @@
+<td data-id="<%= question.question_id %>"><%= question.question_id %></td>
+<td>
+ <% if(language == "en"){ %>
+ 	<%= question.question_description_en %></td>
+ <% }else{ %>
+ 	<%= question.question_description_nl %></td>
+ <% } %>
+<td>
+	<select class="score-option form-control" name="score<%= question.question_id %>" required>
+    	<option value="placeholder" disabled selected><%= copy.selectionLabel %></option>
+		<% _.each(scoreOptions, function(scoreOption, index) { %>
+			  <% var option; 
+                if(language == "en"){
+                  option = scoreOption.question_rating_rating_en;
+                }else{
+                  option = scoreOption.question_rating_rating_nl;
+                }
+              %>
+
+			<% if(question.question_rating_id == (index+1)){ %>
+				 <option selected><%= option %></option>
+			<% }else{  %>
+				 <option><%= option %></option>
+			<% } %>
+    	<% }); %>
+	</select>
+</td>
+<td><p class="score-points"></p></td>
+<td><textarea class="form-control"><%= question.remarks %></textarea></td>
+
+

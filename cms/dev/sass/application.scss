@@ -1,0 +1,468 @@
+body {
+	background-color: #fff;
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+
+}
+p, dl{
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+}
+
+p b{
+  font-weight: normal;
+  background: #ffc757;
+  padding: 2px;
+  font-weight: 400;
+}
+
+.valign{
+  display: table;
+  width: 100%;
+}
+
+.valign .valign-cel {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+#description{
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+.header-content{
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  h1{
+    color: #fff;
+    font-size: 3.6em;
+    margin:0;
+    font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+  }
+  h2{
+    color: #eeb05d;
+    font-size: 1.1em;
+    font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+  }
+
+}
+
+
+#createTitle span{
+  font-size: 0.8em;
+}
+
+
+.media-item{
+  h5{
+    display:block;
+  }
+
+  img{
+    max-width: 140px;
+  }
+}
+
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+#navbar{
+	margin-bottom: 0;
+}
+
+
+#loginForm input{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#roomList{
+  
+  .room-btn{
+    margin-bottom: 10px;
+  }
+
+} 
+
+
+#myCarousel{
+  background: url('assets/header.png') no-repeat center center fixed;
+  height: 350px;
+  margin-bottom: 40px;
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#myCarousel .valign{
+  height: 350px;
+}
+
+#museumSelect{
+  width: 200px;
+  margin-left: 20px;
+  height: 30px;
+}
+
+
+
+/* STICKY FOOTER
+-------------------------------------------------- */
+
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+#navbar{
+	margin-bottom: 0;
+  background: #5225d3;
+
+  .navbar-brand{
+    color: #fff;
+  }
+}
+
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  text-align:center;
+  padding-top:20px;
+    text-align: center;
+  padding: 20px 0;
+}
+
+.btn, btn-primary{
+  background: #25d3b8;
+  border: 0;
+  border-radius: 0;
+}
+
+.btn-link{
+  background: none;
+}
+
+
+
+
+
+.footer{
+  background: #1c1c1c;
+}
+
+
+.footer a{
+  font-family: 'ProximaNova-Regular';
+  font-size: 12px;
+  color: #5a5a5a;
+}
+
+h4{
+    font-size: 2.4rem;
+}
+
+
+
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+
+/* Toggle Styles */
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled {
+    padding-left: 250px;
+}
+
+
+#sidebar-wrapper {
+    padding-top: 0;
+    z-index: 1000;
+    position: fixed;
+    left: 250px;
+    width: 0;
+    height: 100%;
+    margin-left: -250px;
+    overflow-y: auto;
+    background: #646464;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+    #museumSelect{
+      position:absolute;
+      top: 30px;
+    }
+
+    #createExhibitBtn{
+      position:absolute;
+      top: 70px;
+      left: 20px;
+      color: #242928;
+    }
+
+    #createExhibitBtn:hover{
+      background: #2be4c7;
+    }
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 250px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 15px;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -250px;
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position:absolute;
+    top: 110px;
+    width: 250px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav li {
+    padding-left: 0;
+    line-height: 26px;
+    display: block;
+
+}
+
+
+.sidebar-nav li a {
+    padding-left: 20px;
+    display: block;
+    text-decoration: none;
+    color: #ebebeb;
+    padding: 16px 20px;
+}
+
+.sidebar-nav li a:hover {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    height: 65px;
+    font-size: 18px;
+    line-height: 60px;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 250px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 250px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 20px;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+
+
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Regular.otf')  format('opentype'),
+       url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf')  format('truetype'), url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Light.otf')  format('opentype'),
+       url('../fonts/ProximaNova-Light.woff') format('woff'), url('../fonts/ProximaNova-Light.ttf')  format('truetype'), url('../fonts/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,0 +1,79 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 id="createTitle">Nieuwe Exhibitie <span></span></h2>
+        </div>
+
+        <form class="form-horizontal" id="exhibit-form">
+		  <div class="form-group">
+		    <label for="exhibitTitle" class="col-sm-2 control-label">Titel van de exhibitie</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="exhibitTitle" placeholder="Titel van de exhibitie" required>
+		    </div>
+		  </div>
+		  <div class="form-group">
+		    <label for="subtitel" class="col-sm-2 control-label">Subtitel van de exhibitie</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="subtitel" placeholder="Subtitel van de exhibitie" required>
+		    </div>
+		  </div>
+
+
+		  <div class="form-group">
+		    <label for="adres" class="col-sm-2 control-label">Adres</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="adres" placeholder="Adres" required="true">
+		    </div>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="openingsuren" class="col-sm-2 control-label">Openingsuren</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="openingsuren" placeholder="Openingsuren" required>
+		    </div>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="website" class="col-sm-2 control-label">Website</label>
+		    <div class="col-sm-10">
+		      <input type="text" class="form-control" id="website" placeholder="Website" required>
+		    </div>
+		  </div>
+
+		  <div class="form-group">
+		    <label for="description" class="col-sm-2 control-label">Omschrijving</label>
+		    <div class="col-sm-10">
+		      <textarea type="text" class="field" id="description" required="true"></textarea>
+		    </div>
+		  </div>
+
+
+
+		</form>
+      </div>
+  </div>
+
+        <form role="form" id="mediaForm" class="form-horizontal">
+        <div class="form-group">
+		  	<img id="coverImage" src="" class="hide"/>
+
+
+          <label for="badge" class="col-sm-2 control-label">Cover afbeelding</label>
+          <div class="col-sm-10">
+          <div id="badge" class="avatar-media-box pull-left hide" style="background-size: cover; -webkit-background-size: cover;"></div>
+          <span class="btn btn-link btn-file pull-left" id="changebadge">
+                Kies een afbeelding <input type="file" id="nonNativeFileField">
+            </span>
+          </div>
+        </div>
+      </form>
+
+
+		  <div class="form-group">
+    		<div class="col-sm-offset-2 col-sm-10">
+      			<a href="javascript:;" class="btn btn-primary" id="createExhibit">Exhibitie Aanmaken</a>
+    		</div>
+		  </div>
+</div>
+
+

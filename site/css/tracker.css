@@ -1,0 +1,251 @@
+a{
+  text-decoration: none;
+}
+
+a:hover{
+  color: #ffc757;
+}
+
+::selection {
+  background: #ffc757; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ffc757; /* Gecko Browsers */
+}
+
+
+p, dl{
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+}
+
+p b{
+  font-weight: normal;
+  background: #ffc757;
+  padding: 2px;
+  font-weight: 400;
+}
+
+dt{
+  font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial';
+}
+
+dd{
+  margin-bottom: 20px;
+}
+
+blockquote{
+  font-family: "Kameron",Georgia,serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1em;
+  line-height: 1.5em;
+  letter-spacing: 0px;
+  font-weight: 500;
+  font-style: italic;
+  text-align: center;
+  margin: 0;
+  background: #ffc757;
+  padding: 20px;
+}
+
+/* VALIGN */
+.valign{
+  display: table;
+  width: 100%;
+}
+
+.valign .valign-cel {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+/* TOP BAR */
+#top-bar{
+  margin-top: 60px;
+}
+
+#top-bar h5{
+  display: inline-block;
+  color: #fff;
+  background-color: #1c1c1c;
+  padding: 5px 10px;
+  font-size: 1em;
+  margin-top: 10px;
+  font-family: 'ProximaNova-Regular', 'Helvetica', 'Arial';
+}
+
+#top-bar h5 .light{
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+}
+
+
+/* HEADER */
+#header{
+  height: 440px;
+  text-align: center;
+  background: #6a5d63 url(../images/museum_header.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#prototype-header{
+  height: 240px;
+  text-align: center;
+  background: #6a5d63 url(../images/prototype_header.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#concept-header{
+  height: 240px;
+  text-align: center;
+  background: #6a5d63 url(../images/concept_header.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+#wireframe-header{
+  height: 240px;
+  text-align: center;
+  background: #6a5d63 url(../images/wireframe_header.png) no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#header .valign{
+  height: 440px;
+}
+
+.header-content{
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#header h1{
+  color: #fff;
+  font-size: 3.6em;
+  margin:0;
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+}
+
+#header h2{
+  color: #eeb05d;
+  font-size: 1.1em;
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+}
+
+.section{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+
+
+.contentwrapper{
+  padding-top: 0;
+}
+
+#footer{
+  background: #1c1c1c;
+ }
+
+#footer a{  
+  font-size: 8px;
+  margin-top: 10px;
+}
+
+h3{
+  font-size: 2.1em;
+  text-align: center;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+h4{
+  font-family: "proxima-nova","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 400;
+  font-size: 21px;
+  letter-spacing: 0px;
+  text-transform: none;
+  font-size: 15px;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  font-style: normal;
+  color: #f9b862;
+  display: block;
+}
+
+
+
+
+.line-btn{
+  border: solid 2px #ffc757;
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-block;
+  color: #ffc757;
+  font-size: 12px;
+}
+
+.line-btn:hover{
+  background: #ffc757;
+  color: #1c1c1c;
+  transition: all 2s; -moz-transition: all 2s; -ms-transition: all 2s; -o-transition: all 2s; -webkit-transition: all 2s; text-decoration: none; 
+}
+
+#subfooter{
+  background: #444444;
+  color: #fff;
+
+}
+
+#footer{
+  text-align: center;
+  padding: 20px 0;
+}
+
+
+#footer a{
+  font-family: 'ProximaNova-Regular';
+  font-size: 12px;
+  color: #5a5a5a;
+}
+
+#contact-btn{
+  display: block;
+  margin-top: 20px;
+}
+
+
+
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Regular.otf')  format('opentype'),
+       url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf')  format('truetype'), url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url('../fonts/ProximaNova-Light.eot?#iefix') format('embedded-opentype'),  url('../fonts/ProximaNova-Light.otf')  format('opentype'),
+       url('../fonts/ProximaNova-Light.woff') format('woff'), url('../fonts/ProximaNova-Light.ttf')  format('truetype'), url('../fonts/ProximaNova-Light.svg#ProximaNova-Light') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

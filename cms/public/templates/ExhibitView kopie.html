@@ -1,0 +1,494 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-lg-12" test="dd">
+            <h2><%= exhibit.exhibit_title %> in  <span class="small"><%= museum.museum_title %></span></h2>
+
+          <div class="list-group well" >
+              <%
+                var exVisible = "";
+                var exInvisible = ""
+                if(exhibit.exhibit_visible == 1){ 
+                  exVisible = "checked";
+                }else{
+                  exInvisible = "checked";
+                }
+              %>
+
+              <div class="radio">
+                <label><input type="radio" name="exvisible" id="radioVisible" <%= exVisible %>>Exhibitie is zichtbaar</label>
+              </div>
+              <div class="radio">
+                <label><input type="radio" name="exvisible" id="radioInvisible" <%= exInvisible %>>Exhibitie is onzichtbaar</label>
+              </div>
+          </div>
+
+
+            <h3>Algemene Info</h3>
+            <form class="form-horizontal" id="edit-exhibit-form">
+              <div class="form-group">
+                <label for="exhibitTitle" class="col-sm-2 control-label">Titel van de exhibitie</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="exhibitTitle" placeholder="Titel van de exhibitie" value="<%= exhibit.exhibit_title %>" required>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subtitel" class="col-sm-2 control-label">Subtitel van de exhibitie</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="subtitel" placeholder="Subtitel van de exhibitie" value="<%= exhibit.exhibit_subtitle %>" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="adres" class="col-sm-2 control-label">Adres</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="adres" placeholder="Adres" value="<%= exhibit.adres %>" required="true">
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="openingsuren" class="col-sm-2 control-label">Openingsuren</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="openingsuren" value="<%= exhibit.opening %>" placeholder="Openingsuren" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="website" class="col-sm-2 control-label">Website</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="website" placeholder="Website" value="<%= exhibit.website %>" required>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="description" class="col-sm-2 control-label">Omschrijving</label>
+                <div class="col-sm-10">
+                  <textarea type="text" class="field" id="description" required="true" rows="10"><%= exhibit.exhibit_description %></textarea>
+                </div>
+              </div>
+            </form>
+
+            <form role="form" id="coverFileForm" class="form-horizontal">
+                <div class="form-group">
+
+                <label for="badge" class="col-sm-2 control-label">Cover afbeelding</label>
+                <div class="col-sm-10">
+                  <img id="coverImage" height="100" height="auto" src="<%= imagePath %>/<%= exhibit.exhibit_cover_image %>" class="" style="border: 1px solid #5225d3;"/> 
+
+
+                  <span class="btn btn-link btn-file" style="display: block; text-align:left;" id="changebadge">
+                      Kies een nieuwe afbeelding <input type="file" id="coverFileField">
+                  </span>
+                </div>
+              </div>
+            </form>
+
+            <div class="form-group">
+              <div class="col-sm-12">
+                <a href="javascript:;" class="btn btn-primary pull-right" id="editExhibitBtn">Gegevens Wijzigen</a>
+              </div>
+            </div>
+
+
+          <h3>Ruimtes</h3>
+          <ul class="list-group">
+            <li class="list-group-item well"><a href="javascript:;" id="room-add">Ruimte toevoegen</a></li>
+          </ul>
+
+
+            <div id="roomList">
+                 
+            <% _.each(rooms, function(room, index) { %>
+              <div class="list-group-item" room-id ="<%= room.mercury_room_id %>">
+
+                <span class="room-list-order pull-right"><%= room.mercury_room_order %>
+
+                <% if(room.mercury_room_type != "intro" && room.mercury_room_type != "exit") { %>
+                  <a room-id="<%= room.mercury_room_id %>" href="javascript:;" class="delete-room"><i class="icon-trash"></i> Delete</a>
+                <% } %>
+                </span>
+                <h4 class="list-group-item-heading"><%= room.mercury_room_title %></h4>
+
+                  <form class="form-horizontal edit-room-form" id="rm<%= room.mercury_room_id %>">
+                    <div class="form-group">
+                      <label for="room-title" class="col-sm-2 control-label">Titel van de ruimte</label>
+                      <div class="col-sm-10">
+                        <input type="text" class="form-control room-title-edit" placeholder="Titel van de exhibitie" value="<%= room.mercury_room_title %>" required="true">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label for="room-description-edit" class="col-sm-2 control-label">Omschrijving</label>
+                      <div class="col-sm-10">
+                        <textarea  class="room-description-edit" style="width: 100%;"><%= room.mercury_room_description %></textarea>
+                      </div>
+                    </div>
+                      <button type="button" room-id="<%= room.mercury_room_id %>" class="btn btn-primary pull-right save-room" id="">Gegevens Wijzigen</button>
+                  </form>
+
+                  <hr style="margin-top: 70px;"/>
+
+              <h5>Media</h5>
+
+              <% if(room.roomMedia.length > 0) { %>
+
+                <a class="btn btn-primary btn-secondary" data-toggle="collapse" href="#mediaBox<%= index %>" aria-expanded="false" aria-controls="collapseExample">
+                  Toon Media
+                </a>
+
+              <% } %>
+
+            <div id="mediaBox<%= index %>" aria-expanded="true" class="collapse">
+
+
+              <% _.each(room.roomMedia, function(mediaItem, index) { %>
+                  <div class="media-item" style="margin-top: 20px;">
+                    <img src="<%= imagePath %>/<%= mediaItem.mercury_room_media_url %>" />
+
+                    <div style="padding-bottom: 20px; padding-top: 10px;">
+                        <a href="javascript:;" media-id="<%= mediaItem.mercury_room_media_id %>" class="media-remove-btn">Verwijder</a>
+
+                        <span> - </span>
+
+                        <a href="javascript:;" media-id="<%= mediaItem.mercury_room_media_id %>" class="media-edit-btn" room-id ="<%= room.mercury_room_id %>">Wijzig</a>
+                    </div>
+                  </div>
+
+
+              <% }); %>
+            </div>
+
+                <hr/>
+                <a href="javascript:;" class="btn btn-primary add-media-room" selected-room="<%= room.mercury_room_id %>">Media toevoegen</a>
+
+
+              </div>
+
+            <% }); %>
+
+          </div>
+
+
+            <h3>iBeacons</h3>
+
+              <div class="beacons">
+              <ul class="list-group">
+                <li class="list-group-item well"><a href="javascript:;" class="add-beacon-room" selected-room="1">Beacon toevoegen</a>
+                </li>
+              </ul>
+
+
+                <% _.each(beacons, function(beacon, index) { %>
+
+
+                <ul class="media-item" style="padding-left: 0;">
+                  <li class="list-group-item">
+                    <h5><i>Device ID:</i> <%= beacon.mercury_beacon_device_id %></h5>
+
+                      <a href="javascript:;" beacon-id="<%= beacon.mercury_beacon_id %>" class="beacon-remove-btn">Verwijder</a>
+                      <span>-</qpan>
+                      <a href="javascript:;" beacon-id="<%= beacon.mercury_beacon_id %>"  selected-room="1" class="beacon-edit-btn">Wijzig</a>
+                </ul>
+
+
+              <% }); %>
+        </div>
+
+      </div>
+  </div>
+</div>
+
+
+<div id="removeModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Verwijderen</h4>
+            </div>
+            <div class="modal-body">
+                <p>Weet u zeker dat u deze exhibite wil verwijderen?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Sluit</button>
+                <button type="button" id="removeExhibitModal" class="btn btn-red">Verwijder</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<div id="createModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Ruimte toevoegen</h4>
+            </div>
+            <div class="modal-body">
+                <p>Voeg een ruimte toe</p>
+		        <form class="form-horizontal" id="exhibit-form">
+				  <div class="form-group">
+				    <label for="room-title" class="col-sm-2 control-label">Titel van de ruimte</label>
+				    <div class="col-sm-10">
+				      <input type="text" class="form-control" id="room-title" placeholder="Titel van de exhibitie" required="true">
+				    </div>
+				  </div>
+
+				  <div class="form-group">
+				    <label for="room-description" class="col-sm-2 control-label">Omschrijving</label>
+				    <div class="col-sm-10">
+				    	<textarea id="room-description"></textarea>
+				    </div>
+				  </div>
+				</form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Sluit</button>
+                <button type="button" class="btn btn-primary" id="create-room">Ruimte toevoegen</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="editMediaModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Media wijzigen</h4>
+            </div>
+            <div class="modal-body">
+                <p>Wijzig media </p>
+                <form class="form-horizontal" id="edit-media-form">
+                  <div class="form-group">
+                    <label for="mediaSelectEdit" class="col-sm-2 control-label">Type</label>
+                    <div class="col-sm-10">
+                      <select id="mediaSelectEdit">
+                        <option value="image">Afbeelding</option>
+                        <option value="quote">Citaat</option>
+                        <option value="audio">Audio</option>
+                        <option value="editorial">Editorial</option>
+                        <option value="video">Video</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="mediaCaptionEdit" class="col-sm-2 control-label" id="mediaTextEdit">Onderschrift</label>
+                    <div class="col-sm-10">
+                      <textarea id="mediaCaptionEdit" style="width:100%;"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group hide" id="urlPop">
+                    <img id="imageThumbEdit"/>
+                    <label for="urlFieldEdit" class="col-sm-2 control-label">Url</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="urlFieldEdit" placeholder="Url naar het bestand (audio / video)" required="true">
+                    </div>
+                  </div>
+               </form>
+
+                <form role="form" id="mediaEditForm" class="form-horizontal">
+                  <div class="form-group">
+                    <label for="badgeEdit" class="col-sm-2 control-label" id="badgeLabel">Afbeelding</label>
+                    <div class="col-sm-10">
+                  <img id="badgeEdit" height="100" height="auto" src="<%= imagePath %>/<%= exhibit.exhibit_cover_image %>" class="" style="border: 1px solid #5225d3;"/> 
+                        <span class="btn btn-link btn-file pull-left" id="changebadgeEdit">Wijzig afbeelding <input type="file" id="nonNativeFileFieldEdit"></span>
+                    </div>
+                  </div>
+                </form>
+
+          </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Sluit</button>
+                <button type="button" class="btn btn-primary" id="edit-media">Media wijzigen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="createMediaModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Media toevoegen</h4>
+            </div>
+            <div class="modal-body">
+                <p>Voeg media toe aan deze ruimte.</p>
+                <form class="form-horizontal" id="media-form">
+                  <div class="form-group">
+                    <label for="mediaDescription" class="col-sm-2 control-label">Type</label>
+                    <div class="col-sm-10">
+                      <select id="mediaSelect">
+                        <option value="image">Afbeelding</option>
+                        <option value="quote">Citaat</option>
+                        <option value="audio">Audio</option>
+                        <option value="editorial">Editorial</option>
+                        <option value="video">Video</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="mediaCaption" class="col-sm-2 control-label" id="mediaText">Onderschrift</label>
+                    <div class="col-sm-10">
+                      <textarea id="mediaCaption" style="width:100%;"></textarea>
+                    </div>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="roomSelect" class="col-sm-2 control-label">Ruimte</label>
+                    <div class="col-sm-10">
+                      <select id="roomSelect">
+                        <% _.each(rooms, function(room, index) { %>
+                          <option room-id="<%= room.mercury_room_id %>" value="image"><%= room.mercury_room_title %></option>
+                      <% }); %>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-group hide" id="urlPop">
+                    <img id="imageThumb"/>
+                    <label for="urlField" class="col-sm-2 control-label">Url</label>
+                    <div class="col-sm-10">
+                      <input type="text" class="form-control" id="urlField" placeholder="Url naar het bestand (audio / video)" required="true">
+                    </div>
+                  </div>
+               </form>
+
+                <form role="form" id="mediaForm" class="form-horizontal">
+                  <div class="form-group">
+                    <label for="badge" class="col-sm-2 control-label" id="badgeLabel">Afbeelding</label>
+                    <div class="col-sm-10">
+                      <img id="badge" class="avatar-media-box pull-left" src=""/>
+                        <span class="btn btn-link btn-file pull-left" id="changebadge">Kies een afbeelding <input type="file" id="nonNativeFileField"></span>
+                    </div>
+                  </div>
+                </form>
+
+          </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Sluit</button>
+                <button type="button" class="btn btn-primary" id="create-media">Media toevoegen</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="editBeaconModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Beacon wijzigen</h4>
+            </div>
+            <div class="modal-body">
+                <p>Wijzig beacon toe</p>
+            <form class="form-horizontal" id="beacon-edit-form">
+         
+          <div class="form-group">
+            <label for="mercury_beacon_identifier_edit" class="col-sm-2 control-label">Beacon Identifier</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="mercury_beacon_identifier_edit" placeholder="Identifier ( default: Estimotes)" value="Estimotes" required="true">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="roomSelectEdit" class="col-sm-2 control-label">Ruimte</label>
+            <div class="col-sm-10">
+              <select id="roomSelectEdit">
+              <% _.each(rooms, function(room, index) { %>
+                  <option room-id="<%= room.mercury_room_id %>" value="image"><%= room.mercury_room_title %></option>
+              <% }); %>
+              </select>
+            </div>
+          </div>
+         
+          <div class="form-group">
+            <label for="mercury_beacon_device_id_edit" class="col-sm-2 control-label">Beacon Device ID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="mercury_beacon_device_id_edit" placeholder="BV 37098" value="" required="true">
+              <p>Gebruik de Estimotes app om dit terug te vinden. bv </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mercury_beacon_uuid_edit" class="col-sm-2 control-label">Beacon UUID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="mercury_beacon_uuid_edit" placeholder="B9407F30-F5F8-466E-AFF9-25556B57FE6D" value="" required="true">
+              <p>Gebruik de Estimotes app om dit terug te vinden. </p>
+            </div>
+          </div>
+        </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Sluit</button>
+                <button type="button" class="btn btn-primary" id="edit-beacon-submit">Beacon wijzigen</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<div id="createBeaconModal" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">Beacon toevoegen</h4>
+            </div>
+            <div class="modal-body">
+                <p>Voeg een beacon toe</p>
+            <form class="form-horizontal" id="beacon-form">
+         
+          <div class="form-group">
+            <label for="mercury_beacon_identifier" class="col-sm-2 control-label">Beacon Identifier</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="mercury_beacon_identifier" placeholder="Identifier ( default: Estimotes)" value="Estimotes" required="true">
+            </div>
+          </div>
+
+           <div class="form-group">
+            <label for="roomSelect" class="col-sm-2 control-label">Ruimte</label>
+            <div class="col-sm-10">
+              <select id="roomSelect">
+              <% _.each(rooms, function(room, index) { %>
+                  <option room-id="<%= room.mercury_room_id %>" value="image"><%= room.mercury_room_title %></option>
+              <% }); %>
+              </select>
+            </div>
+          </div>
+         
+          <div class="form-group">
+            <label for="mercury_beacon_identifier" class="col-sm-2 control-label">Beacon Device ID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="mercury_beacon_device_id" placeholder="BV 37098" value="" required="true">
+              <p>Gebruik de Estimotes app om dit terug te vinden. bv </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="mercury_beacon_uuid" class="col-sm-2 control-label">Beacon UUID</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="mercury_beacon_uuid" placeholder="B9407F30-F5F8-466E-AFF9-25556B57FE6D" value="" required="true">
+              <p>Gebruik de Estimotes app om dit terug te vinden. </p>
+            </div>
+          </div>
+        </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-link" data-dismiss="modal">Sluit</button>
+                <button type="button" class="btn btn-primary" id="create-beacon">Beacon aanmaken</button>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>

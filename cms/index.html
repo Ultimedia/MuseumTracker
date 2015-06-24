@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MuseumTracker - CMS</title>
+    <link rel="stylesheet" type="text/css" href="public/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/application.css" />
+    <link href='http://fonts.googleapis.com/css?family=Dosis:300,400,500,600' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <script type="text/javascript" src="public/js/vendor/jquery.js"></script>
+    <script type="text/javascript" src="public/js/vendor/underscore.js"></script>
+    <script type="text/javascript" src="public/js/vendor/backbone.js"></script>
+    <script type="text/javascript" src="public/js/vendor/bootstrap.min.js"></script>
+    <script type="text/javascript" src="public/js/vendor/jquery.validate.js"></script>
+    <script type="text/javascript" src="public/js/vendor/jquery-ui-1.10.4.custom.min.js"></script>
+
+
+    <style>
+      .exhibit-visible span, .exhibit-hidden span{
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-radius: 20px;
+          -moz-border-radius: 20px;
+          -webkit-border-radius: 20px;
+          background: #25d3b8;
+          float: right;
+      }
+
+      .exhibit-hidden span{
+        background-color: red;
+      }
+
+      #sidebar-wrapper{
+        top: 0;
+        z-index: 10;
+      }
+
+      #sidebar-wrapper #museumSelect{
+        top: 60px;
+      }
+      #sidebar-wrapper #createExhibitBtn{
+        top: 90px;
+      }
+
+      #sidebar-wrapper .sidebar-nav{
+        top: 130px;
+      }
+
+      .btn-secondary{
+        background: #6b6b6b;
+      }
+
+    </style>
+    
+    <script type="text/javascript" src="public/js/main.js"></script>
+  </body>
+</html>

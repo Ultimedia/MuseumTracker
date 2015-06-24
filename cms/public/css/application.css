@@ -1,0 +1,479 @@
+/* line 1, ../../dev/sass/application.scss */
+body {
+  background-color: #fff;
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+}
+
+/* line 6, ../../dev/sass/application.scss */
+p, dl {
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+}
+
+/* line 10, ../../dev/sass/application.scss */
+p b {
+  font-weight: normal;
+  background: #ffc757;
+  padding: 2px;
+  font-weight: 400;
+}
+
+/* line 17, ../../dev/sass/application.scss */
+.valign {
+  display: table;
+  width: 100%;
+}
+
+/* line 22, ../../dev/sass/application.scss */
+.valign .valign-cel {
+  display: table-cell;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* line 28, ../../dev/sass/application.scss */
+#description {
+  width: 100%;
+}
+
+/* line 32, ../../dev/sass/application.scss */
+.header-content {
+  display: block;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* line 38, ../../dev/sass/application.scss */
+.header-content h1 {
+  color: #fff;
+  font-size: 3.6em;
+  margin: 0;
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+}
+/* line 44, ../../dev/sass/application.scss */
+.header-content h2 {
+  color: #eeb05d;
+  font-size: 1.1em;
+  font-family: 'ProximaNova-Light', 'Helvetica', 'Arial';
+}
+
+/* line 53, ../../dev/sass/application.scss */
+#createTitle span {
+  font-size: 0.8em;
+}
+
+/* line 59, ../../dev/sass/application.scss */
+.media-item h5 {
+  display: block;
+}
+/* line 63, ../../dev/sass/application.scss */
+.media-item img {
+  max-width: 140px;
+}
+
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+/* line 73, ../../dev/sass/application.scss */
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+/* line 78, ../../dev/sass/application.scss */
+#navbar {
+  margin-bottom: 0;
+}
+
+/* line 83, ../../dev/sass/application.scss */
+#loginForm input {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* line 90, ../../dev/sass/application.scss */
+#roomList .room-btn {
+  margin-bottom: 10px;
+}
+
+/* line 97, ../../dev/sass/application.scss */
+#myCarousel {
+  background: url("assets/header.png") no-repeat center center fixed;
+  height: 350px;
+  margin-bottom: 40px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 108, ../../dev/sass/application.scss */
+#myCarousel .valign {
+  height: 350px;
+}
+
+/* line 112, ../../dev/sass/application.scss */
+#museumSelect {
+  width: 200px;
+  margin-left: 20px;
+  height: 30px;
+}
+
+/* STICKY FOOTER
+-------------------------------------------------- */
+/* line 123, ../../dev/sass/application.scss */
+body {
+  padding-bottom: 40px;
+  color: #5a5a5a;
+}
+
+/* line 128, ../../dev/sass/application.scss */
+#navbar {
+  margin-bottom: 0;
+  background: #5225d3;
+}
+/* line 132, ../../dev/sass/application.scss */
+#navbar .navbar-brand {
+  color: #fff;
+}
+
+/* line 138, ../../dev/sass/application.scss */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+/* line 142, ../../dev/sass/application.scss */
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+/* line 146, ../../dev/sass/application.scss */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #f5f5f5;
+  text-align: center;
+  padding-top: 20px;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* line 159, ../../dev/sass/application.scss */
+.btn, btn-primary {
+  background: #25d3b8;
+  border: 0;
+  border-radius: 0;
+}
+
+/* line 165, ../../dev/sass/application.scss */
+.btn-link {
+  background: none;
+}
+
+/* line 173, ../../dev/sass/application.scss */
+.footer {
+  background: #1c1c1c;
+}
+
+/* line 178, ../../dev/sass/application.scss */
+.footer a {
+  font-family: 'ProximaNova-Regular';
+  font-size: 12px;
+  color: #5a5a5a;
+}
+
+/* line 184, ../../dev/sass/application.scss */
+h4 {
+  font-size: 2.4rem;
+}
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+/* line 196, ../../dev/sass/application.scss */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+/* line 205, ../../dev/sass/application.scss */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* line 209, ../../dev/sass/application.scss */
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+/* line 213, ../../dev/sass/application.scss */
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+/* Center align the text within the three columns below the carousel */
+/* line 224, ../../dev/sass/application.scss */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* line 228, ../../dev/sass/application.scss */
+.marketing h2 {
+  font-weight: normal;
+}
+
+/* line 231, ../../dev/sass/application.scss */
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+/* Featurettes
+------------------------- */
+/* line 240, ../../dev/sass/application.scss */
+.featurette-divider {
+  margin: 80px 0;
+  /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+/* line 245, ../../dev/sass/application.scss */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+/*!
+ * Start Bootstrap - Simple Sidebar HTML Template (http://startbootstrap.com)
+ * Code licensed under the Apache License v2.0.
+ * For details, see http://www.apache.org/licenses/LICENSE-2.0.
+ */
+/* Toggle Styles */
+/* line 259, ../../dev/sass/application.scss */
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+/* line 267, ../../dev/sass/application.scss */
+#wrapper.toggled {
+  padding-left: 250px;
+}
+
+/* line 271, ../../dev/sass/application.scss */
+#sidebar-wrapper {
+  padding-top: 0;
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #646464;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+/* line 286, ../../dev/sass/application.scss */
+#sidebar-wrapper #museumSelect {
+  position: absolute;
+  top: 30px;
+}
+/* line 291, ../../dev/sass/application.scss */
+#sidebar-wrapper #createExhibitBtn {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+  color: #242928;
+}
+/* line 298, ../../dev/sass/application.scss */
+#sidebar-wrapper #createExhibitBtn:hover {
+  background: #2be4c7;
+}
+
+/* line 303, ../../dev/sass/application.scss */
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+
+/* line 307, ../../dev/sass/application.scss */
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+
+/* line 313, ../../dev/sass/application.scss */
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+/* Sidebar Styles */
+/* line 320, ../../dev/sass/application.scss */
+.sidebar-nav {
+  position: absolute;
+  top: 110px;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* line 329, ../../dev/sass/application.scss */
+.sidebar-nav li {
+  padding-left: 0;
+  line-height: 26px;
+  display: block;
+}
+
+/* line 337, ../../dev/sass/application.scss */
+.sidebar-nav li a {
+  padding-left: 20px;
+  display: block;
+  text-decoration: none;
+  color: #ebebeb;
+  padding: 16px 20px;
+}
+
+/* line 345, ../../dev/sass/application.scss */
+.sidebar-nav li a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* line 351, ../../dev/sass/application.scss */
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+  text-decoration: none;
+}
+
+/* line 356, ../../dev/sass/application.scss */
+.sidebar-nav > .sidebar-brand {
+  height: 65px;
+  font-size: 18px;
+  line-height: 60px;
+}
+
+/* line 362, ../../dev/sass/application.scss */
+.sidebar-nav > .sidebar-brand a {
+  color: #999999;
+}
+
+/* line 366, ../../dev/sass/application.scss */
+.sidebar-nav > .sidebar-brand a:hover {
+  color: #fff;
+  background: none;
+}
+
+@media (min-width: 768px) {
+  /* line 372, ../../dev/sass/application.scss */
+  #wrapper {
+    padding-left: 250px;
+  }
+
+  /* line 376, ../../dev/sass/application.scss */
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+
+  /* line 380, ../../dev/sass/application.scss */
+  #sidebar-wrapper {
+    width: 250px;
+  }
+
+  /* line 384, ../../dev/sass/application.scss */
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+
+  /* line 388, ../../dev/sass/application.scss */
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+
+  /* line 393, ../../dev/sass/application.scss */
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  /* line 407, ../../dev/sass/application.scss */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+
+  /* line 410, ../../dev/sass/application.scss */
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  /* line 414, ../../dev/sass/application.scss */
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  /* line 420, ../../dev/sass/application.scss */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  /* line 425, ../../dev/sass/application.scss */
+  .carousel-caption p {
+    margin-bottom: 20px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  /* line 431, ../../dev/sass/application.scss */
+  .featurette-heading {
+    font-size: 50px;
+  }
+}
+@media (min-width: 992px) {
+  /* line 437, ../../dev/sass/application.scss */
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+@font-face {
+  font-family: 'ProximaNova-Regular';
+  src: url("../fonts/ProximaNova-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Regular.otf") format("opentype"), url("../fonts/ProximaNova-Regular.woff") format("woff"), url("../fonts/ProximaNova-Regular.ttf") format("truetype"), url("../fonts/ProximaNova-Regular.svg#ProximaNova-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ProximaNova-Light';
+  src: url("../fonts/ProximaNova-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Light.otf") format("opentype"), url("../fonts/ProximaNova-Light.woff") format("woff"), url("../fonts/ProximaNova-Light.ttf") format("truetype"), url("../fonts/ProximaNova-Light.svg#ProximaNova-Light") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}

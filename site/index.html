@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Devine HOWEST: PWO - MuseumTracker</title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/tracker.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+          $('a[href^=#]').click(function(e){
+        
+            e.preventDefault()
+
+            var name = $(this).attr('href').substr(1);
+            var pos = $('#'+name).offset();
+
+            $('body').animate({ scrollTop: pos.top - 20 }, 500);
+      });
+    });
+  </script>
+</head>
+<body>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="container">
+
+  <!-- header -->
+  <div class="row" id="top-bar">
+    <div class="eleven columns"><h5><span class="light">PWO:</span> MuseumTracker</h5></div>
+    <div class="one columns"><a href="http://www.devine.be" target="_blank"><img src="images/devine_logo.png" alt="Devine Logo" style="width: 60px; height:47px"/></a></div>
+  </div>
+</div>
+
+  <div id="header">
+    <div class="twelve columns">
+      <div class="valign">
+      <div class="valign-cel">
+        <div class="header-content">
+        <h1>MuseumTracker</h1>
+        <h2>PWO Project 02/06/2014 - 02/06/2015</h2>
+        <a href="#research" class="line-btn">ONTDEK</a>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>
+
+<div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="twelve columns">
+          <h3>Een mobiel platform op maat van musea en museumbezoekers dat de barrière tussen de fysieke en de digitale ruimte doorbreekt en de bezoeker de kans geeft om actief aan waardebepaling te doen</h3>
+        </div>
+      </div>
+    </div>
+
+    <div class="section contentwrapper" id="research">
+
+      <div class="row">
+        <div class="four columns">
+          <h4>1. DE ONDERZOEKSFASE</h4>
+        </div>
+        <div class="eight columns">
+          <p>De eerste maanden doorliep dit project een uitgebreide onderzoeksfase. Door middel van <i>Contextual Design Research</i> technieken werden de noden van zowel de museumbezoeker als die van de culturere instelling bepaald. De onderzoeksanalyse (denk daarbij aan persona's, storyboards en relevante use-cases) werd gepubliceerd in een digitale bijlage die u kan <a href="files/Waardebepaling_onderzoeksAnalyse.pdf" target="_blank"/>downloaden</a>.
+           </p>
+
+           <p>Een groot deel van dit onderzoek werd doorgebracht in musea om de bezoeker zo goed mogelijk te observeren / schaduwen in de culturele omgeving. Vervolgens werden verschillende experts uit de museumwereld samengebracht om constructief en creatief aan het werk te gaan met de  onderzoeksresultaten door middel van Co-Creatie technieken.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" id="wireframe-header">
+    <div class="row">
+      <div class="twelve columns"></div>
+    </div>
+  </div>
+
+<div class="container">
+  <div class="section">
+
+
+    <div class="row">
+      <div class="four columns">
+        <h4>2. CONCEPTVORMING</h4>
+      </div>
+      <div class="eight columns">
+        <p>De combinatie van onderzoeksdata en creatieve workshops zorgde op zijn beurt voor enkele interessante invalshoeken om conceptueel rond te werken. De verschillende concepten werden aan de hand van <a href="files/ConceptBook.pdf" target="_blank">wireframes</a> en paper prototypes uitgewerkt en vervolgens besproken met culturele instellingen en eindgebruikers. Na verschillende iteraties op het ruwe concept kwam een eerste visuele mockup tot stand.</p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="eight columns">
+          <img src="images/concept1.png" width="100%"/>
+      </div>
+      <div class="four columns">
+        <h5>Het Concept</h5>
+        <p>Een groot probleem met mobiele apps binnen het museumlandschap is hun vergangkelijkheid. Doorgaans laten musea een mobiele app op maat maken voor één specifieke exhibitie maar wanneer deze exhibitie voorbij is sterft deze op maat gemaakt app een stille dood waardoor men op het einde van de rit met een duur en onbruikbaar stuk software achterblijft.</p>
+
+        <p>De MuseumTracker app vertrekt echter vanuit het principe van een digitaal platform, musea kunnen zelf exhibities toevoegen en beheren. Met een op maat gemaakt content management systeem (CMS) kunnen musea aan de slag als een soort van digitale curator. </p>
+      </div>
+    </div>
+
+    <div class="row" style="padding-top: 20px;">
+      <div class="eight columns">
+        <h5>Nearables</h5>
+        <p>Als bezoeker wil je deze digitale beleving ervaren zonder dat dit te veel de aandacht van de fysieke tentoonstelling opeist. De app maakt daarom gebruik van Nearable technologie (Bluetooth sensoren die jouw locatie binnen de museumruimte kunnen bepalen). Nearables zullen je automatisch begeleiden zonder dat je hiervoor het scherm van je smartphone of tablet moet aanraken.</p>
+
+        <p>Beacons zijn klein en relatief goedkoop met een vervangbare batterij die 1-2 jaar meegaat. Bovendien kunnen deze steeds hergebruikt worden zodat de kost voor de culturele instelling ook laag blijft. </p>
+      </div>
+      <div class="four columns">
+        <img src="images/ibeacon.png" width="80%"/>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="twelve columns">
+        <h5>De gebruikerservaring in kaart</h5>
+        <img src="images/timeline.png" width="100%"/>
+      </div>
+      <div class="two columns">
+        <p>&nbsp;</p>
+      </div>
+    </div>
+
+
+    <div class="row">
+      <div class="four columns">
+          <h5>Sociale Media</h5>
+          <p>Bezoekers kunnen de applicatie koppelen aan hun Facebook of Twitter account. Op deze manier kan men snel en eenvoudig media (waaronder foto's, video's, tekst, audio) delen met de culturele instelling en andere museumbezoekers die dezelfde ruimte betreden.</p>
+
+          <p>Hoewel de authenticatie met sociale media deze functionaliteiten makkelijker maakt is het echter niet essentieel om de applicatie te gebruiken. Gebruikers kunnen zich ook zonder sociale media aanmelden en content delen.</p>
+      </div>
+      <div class="eight columns">
+          <img src="images/concept2.png" width="100%"/>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="section" id="prototype-header">
+    <div class="row">
+      <div class="twelve columns">
+      </div>
+    </div>
+  </div>
+
+<div class="container">
+
+  <div class="section">
+    <div class="row">
+      <div class="four columns">
+        <h4>3. PROTOTYPE</h4>
+      </div>
+
+      <div class="eight columns">
+        <p>Na het finaliseren van de visuele mockups werd er een eerste prototpe voor het iOS platform ontwikkeld. De app is geschikt voor iPhone / iPad (met eventuele uitbreiding voor de Apple Watch in de toekomst). De app werd native ontwikkeld met de programmeertaal Swift.
+        </p>
+
+        <p>In de eerste fase werd het prototype op kleine schaal getest in de gebouwen van HOWEST Kortrijk. Na optimalisatie werd er een testscase opgezet in een museumruimte met een vaste groep museumgebruikers als testpubliek. Deze evaluatie legt de focus op conceptvalidatie maar ook op de gebruikerservaring, usablity en accessibility.</p>
+
+        <p>Het prototype is momenteel volledig testbaar, alsook het CMS systeem dat door de aangesloten culturele instelling gebruikt kan worden om digitaal content te beheren zit in een stabiele testfase.</p>
+      </div>
+
+    </div>
+
+    <div class="row">
+      <div class="six columns">
+        <p><img src="images/mock1.png" width="100%" alt=""/></p>
+      </div>
+      <div class="six columns">
+        <p><img src="images/mock3.png" width="100%" alt=""/></p>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<div id="subfooter">
+  <div class="container">
+    <div class="section">
+      <div class="row">
+        <div class="four columns">
+          <h4>4. VERVOLTRAJECT</h4>
+        </div>
+        <div class="eight columns">
+          <p>Dit project werd uitgevoerd binnen een PWO onderzoektraject van 1 jaar (2 juli 2014 tot 2 juli 2015).</p>
+
+          <p>Hoewel dit project ondertussen in de eindfase zit is het de bedoeling om via nieuwe investeringskanalen en  partners een vervolgtraject aan dit project te koppelen. Het doel van dit vervolgtraject is het prototype optimaliseren en klaarmaken voor gebruik op grote schaal binnen het museumlandschap.</p>
+          <p>
+            Heeft u interesse in een demo, meer informatie of in eventuele samenwerking?
+            <a href="mailto:" class="line-btn" style="max-width: 150px;" id="contact-btn">CONTACTEER ONS</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="section" id="footer">
+    <div class="row">
+      <div class="twelve columns" style="tex-align: right;">
+        <img src="images/howest_logo.png" alt="" width="80px" class=""/>
+      </div>
+    </div>
+</div>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

@@ -1,0 +1,55 @@
+<div id="wrapper">
+
+  <div id="sidebar-wrapper">
+
+                <% if(museums.length > 1){ %>
+
+                  <select id="museumSelect">
+                        <% _.each(museums, function(museum, index) { %>
+
+                          <% 
+                          var selectedOpt = ""
+                          if(String(index) == String(optionSelected)){ 
+                              selectedOpt = "selected"                          
+                           } %>
+
+                          <option museum-id="<%= index %>" <%= selectedOpt %>><%= museum.museum_title %></option>
+                        <% }); %>
+                  </select>
+
+                <% } %>
+
+              <ul class="sidebar-nav">
+
+                <% if(selectedMuseum.museum_title){ %>
+                        <% _.each(selectedMuseum.exhibits, function(exhibit, index) { %>
+                          <li><a exhibit-id="<%= index %>" href="#exhibit" class="exhibit-select">
+                              <%= exhibit.exhibit_title %>
+                              </a>
+                          </li>
+                        <% }); %>
+                <% } %>
+            </ul>
+
+            <a href="javascript:;" id="createExhibitBtn" class="btn btn-purple">Nieuwe Exhibitie</a>
+
+        </div>
+
+
+  <div id="page-content-wrapper">
+      <div class="container-fluid">
+          <div class="row">
+              <div class="col-lg-12">
+                  <h1>Geen exhibities gevonden</h1>
+                  <a href="#create-exhibit" class="btn btn-link" id="menu-toggle">Maak een nieuwe exhibitie aan</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
